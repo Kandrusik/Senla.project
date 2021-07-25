@@ -1,28 +1,28 @@
-package task16_JUNIT5.Tests;
+package task16.TestNG;
 
 import Utils.Driver;
 import Utils.Log;
-import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.*;
 
 import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static task16_JUNIT5.Locators.MainLocators.*;
+import static task16.JUNIT5.Locators.MainLocators.*;
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+
 public class Main {
 
     private final WebDriver driver = Driver.getChromeDriver();
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(13));
 
 
-    @BeforeAll
-    public void login() {
+    @BeforeClass
+    public void beforeClass() {
         driver.get("http://a.testaddressbook.com/");
         Log.info("Authorization on the site");
         driver.findElement(SING_IN).click();
@@ -31,11 +31,12 @@ public class Main {
         driver.findElement(SESSION_PASSWORD).sendKeys("olegmen123");
         Log.info("Click on the authorization button");
         driver.findElement(LOGIN_BUTTON).click();
+
+        Log.info("Метод выполняется перед набором тестов, размещенных в текущем классе");
     }
 
 
-    @Test
-    @DisplayName("Adding a new address:")
+    @Test(enabled = false)
     public void addAddress() {
         Log.info("Adding address");
         driver.findElement(ADDRESS_BUTTON).click();
@@ -80,7 +81,6 @@ public class Main {
 
 
     @Test
-    @DisplayName("Editing the first address in the list:")
     public void editAddress() {
         Log.info("Change address");
         driver.findElement(ADDRESS_BUTTON).click();
@@ -114,8 +114,6 @@ public class Main {
 
 
     @Test
-    @DisplayName("Deleting the first address:")
-    @Disabled("Test ignored")
     public void deleteAddress() {
         Log.info("Delete address");
         driver.findElement(ADDRESS_BUTTON).click();
@@ -125,14 +123,14 @@ public class Main {
     }
 
 
-    @AfterEach
+    @AfterMethod
     public void goToHome() {
         Log.info("Go to HOME page");
         driver.findElement(HOME_BUTTON).click();
     }
 
 
-    @AfterAll
+    @AfterClass
     public void exit() {
         Log.info("Sign Out");
         driver.findElement(SING_OUT).click();
