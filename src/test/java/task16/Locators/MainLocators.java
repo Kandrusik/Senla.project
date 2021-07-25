@@ -1,4 +1,4 @@
-package task16.JUNIT5.Locators;
+package task16.Locators;
 
 import org.openqa.selenium.By;
 

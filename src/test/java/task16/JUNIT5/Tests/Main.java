@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static task16.JUNIT5.Locators.MainLocators.*;
+import static task16.Locators.MainLocators.*;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class Main {

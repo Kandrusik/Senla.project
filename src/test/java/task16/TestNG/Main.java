@@ -12,7 +12,7 @@ import org.testng.annotations.*;
 import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static task16.JUNIT5.Locators.MainLocators.*;
+import static task16.Locators.MainLocators.*;
 
 
 public class Main {
