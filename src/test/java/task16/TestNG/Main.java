@@ -36,8 +36,9 @@ public class Main {
     }
 
 
-    @Test(enabled = false)
+    @Test
     public void addAddress() {
+
         Log.info("Adding address");
         driver.findElement(ADDRESS_BUTTON).click();
         driver.findElement(ADD_ADDRESS).click();
@@ -113,7 +114,7 @@ public class Main {
     }
 
 
-    @Test
+    @Test(enabled = false)
     public void deleteAddress() {
         Log.info("Delete address");
         driver.findElement(ADDRESS_BUTTON).click();
