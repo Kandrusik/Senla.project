@@ -1,7 +1,7 @@
-package task16.TestNG;
+package task16.testNG;
 
-import Utils.Driver;
-import Utils.Log;
+import task16.Driver;
+import task16.Log;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,7 +12,7 @@ import org.testng.annotations.*;
 import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static task16.Locators.MainLocators.*;
+import static task16.locators.MainLocators.*;
 
 
 public class Main {

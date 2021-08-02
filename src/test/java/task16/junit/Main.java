@@ -1,7 +1,7 @@
-package task16.JUNIT5.Tests;
+package task16.junit;
 
-import Utils.Driver;
-import Utils.Log;
+import task16.Driver;
+import task16.Log;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static task16.Locators.MainLocators.*;
+import static task16.locators.MainLocators.*;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class Main {

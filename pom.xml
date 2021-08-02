@@ -24,7 +24,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.7.1</version>
+            <version>5.4.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -48,6 +48,7 @@
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
@@ -62,6 +63,13 @@
             <version>6.11</version>
             <scope>test</scope>
         </dependency>
-    </dependencies>
 
+        <!-- Selenide -->
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>5.23.0</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>
